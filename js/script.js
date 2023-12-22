@@ -1,11 +1,21 @@
 const myLibrary = [];
 
-function Book() {
-  // the constructor...
+function Book(title, author, pages, read, index) {
+  this.title = title;
+  this.author = author;
+  this.pages = pages;
+  this.read = read;
+  this.index = index;
 }
 
 function addBookToLibrary() {
-  // do stuff here
+  let bookNum = myLibrary.length;    //find the end of the library to determine the next book index
+  myLibrary.push(new Book("Pandora's Star", "Peter F Hamilton", 988, true, bookNum));
 }
 
-console.log("Hello World")
+addBookToLibrary();
+addBookToLibrary();
+addBookToLibrary();
+addBookToLibrary();
+
+console.log(myLibrary);
